@@ -4,7 +4,7 @@ export default function LoginForm() {
     return (
         <div className="grid place-items-center">
             <div className="shadow-lg rounded-lg border-t-4 border-green-400 w-1/2 mx-auto my-10">
-                <h1 className="text-xl font-bold my-4">Enter The Details</h1>
+                <h1 className="text-xl font-bold my-4">Please Register Yourself. You'll be able to login soon!!</h1>
                 <form className="flex flex-col gap-3">
 {/*                     <input type="text" placeholder="Email" />
                     <input type="password" placeholder="Password" />
