@@ -1,0 +1,103 @@
+{
+    "courses": [{
+            "id": 1,
+            "title": "Beginner Guitar Lessons",
+            "slug": "beginner-guitar-lessons",
+            "description": "Learn the basics of playing the guitar.",
+            "price": 49.99,
+            "instructor": "John Mayer",
+            "isFeatured": true,
+            "image": "beginner-guitar-lessons.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Advanced Piano Techniques",
+            "slug": "advanced-piano-techniques",
+            "description": "Master advanced piano techniques and compositions.",
+            "price": 79.99,
+            "instructor": "Ludovico Einaudi",
+            "isFeatured": false,
+            "image": "advanced-piano-techniques.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Music Theory Fundamentals",
+            "slug": "music-theory-fundamentals",
+            "description": "Understand the fundamentals of music theory.",
+            "price": 29.99,
+            "instructor": "Hans Zimmer",
+            "isFeatured": true,
+            "image": "music-theory-fundamentals.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Vocal Training for Beginners",
+            "slug": "vocal-training-for-beginners",
+            "description": "Learn the basics of vocal training and improve your singing.",
+            "price": 39.99,
+            "instructor": "Adele Adkins",
+            "isFeatured": true,
+            "image": "vocal-training-for-beginners.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Jazz Improvisation",
+            "slug": "jazz-improvisation",
+            "description": "Explore the art of jazz improvisation.",
+            "price": 69.99,
+            "instructor": "Miles Davis",
+            "isFeatured": false,
+            "image": "jazz-improvisation.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Drum Set Basics",
+            "slug": "drum-set-basics",
+            "description": "Learn the basics of playing the drum set.",
+            "price": 59.99,
+            "instructor": "Dave Grohl",
+            "isFeatured": true,
+            "image": "drum-set-basics.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Songwriting Techniques",
+            "slug": "songwriting-techniques",
+            "description": "Learn how to write and compose your own songs.",
+            "price": 89.99,
+            "instructor": "Taylor Swift",
+            "isFeatured": false,
+            "image": "songwriting-techniques.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Electronic Music Production",
+            "slug": "electronic-music-production",
+            "description": "Produce your own electronic music tracks.",
+            "price": 129.99,
+            "instructor": "Deadmau5",
+            "isFeatured": true,
+            "image": "electronic-music-production.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Classical Violin Mastery",
+            "slug": "classical-violin-mastery",
+            "description": "Master classical violin techniques.",
+            "price": 79.99,
+            "instructor": "Itzhak Perlman",
+            "isFeatured": false,
+            "image": "classical-violin-mastery.jpg"
+        },
+        {
+            "id": 10,
+            "title": "Bass Guitar Essentials",
+            "slug": "bass-guitar-essentials",
+            "description": "Learn the essential techniques for playing bass guitar.",
+            "price": 109.99,
+            "instructor": "Flea",
+            "isFeatured": true,
+            "image": "bass-guitar-essentials.jpg"
+        }
+    ]
+}
