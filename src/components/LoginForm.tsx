@@ -11,7 +11,7 @@ export default function LoginForm() {
                     <button className="bg-green-600 text-white font-bold cursor-pointer px-6 py-2">Login</button>
                     <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">Error Message</div> */}
                     <Link className="text-sm mt-3 text-right" href="/register">
-                        Don&apos;t have an account? <span className="underline font-bold">Register</span>
+                        Don't have an account? <span className="underline font-bold">Register</span>
                     </Link>
                 </form>
             </div>
