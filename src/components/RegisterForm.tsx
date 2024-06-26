@@ -42,7 +42,7 @@ const [role, setRole] = useState("user");
                 setSuccessMessage(data.message || "Registration successful!");
             } else {
                 console.error("Registration failed:", data.message);
-                setError(data.message );
+                 setError(data.message || "Registration failed");
                 setSuccessMessage("");
             }
         } catch (error) {
