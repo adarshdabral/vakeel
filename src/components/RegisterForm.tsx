@@ -7,42 +7,50 @@ export default function RegisterForm() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [role, setRole] = useState("user"); // new state for role
+const [role, setRole] = useState("user"); 
     const [error, setError] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => { // specify the type for e
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
-        if (!name || !email || !password || !role) {
-            setError("All fields are necessary");
-            return;
-        }
-
+        setError("");
+        setSuccessMessage("");
+        
         try {
+            if (!name || !email || !password || !role) {
+                setError("All fields are necessary");
+                return;
+            }
+    
             const res = await fetch('/api/register', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ name, email, password, role }), // include role in the payload
+                body: JSON.stringify({ name, email, password, role }),
             });
-
+    
+            const data = await res.json();
+    
             if (res.ok) {
-                e.currentTarget.reset();
+                console.log("Registration successful:", data.message);
                 setName("");
                 setEmail("");
                 setPassword("");
                 setRole("user");
                 setError("");
+                setSuccessMessage(data.message || "Registration successful!");
             } else {
-                const data = await res.json();
-                setError(data.message || "User registration failed");
+                console.error("Registration failed:", data.message);
+                setError(data.message || "Registration failed");
+                setSuccessMessage("");
             }
         } catch (error) {
-            setError("Error during registration");
+            console.error("Error during registration:", error);
+            setError("Error during registration: " + (error instanceof Error ? error.message : String(error)));
+            setSuccessMessage("");
         }
     };
-
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <div className="bg-white shadow-md rounded-lg border-t-4 border-green-400 w-full max-w-md p-6">
@@ -115,10 +123,15 @@ export default function RegisterForm() {
                     Register
                 </button>
                 {error && (
-                    <div className="bg-red-500 text-white text-center py-2 rounded mt-2">
-                        {error}
-                    </div>
-                )}
+    <div className="bg-red-500 text-white text-center py-2 rounded mt-2">
+        {error}
+    </div>
+)}
+{successMessage && (
+    <div className="bg-green-500 text-white text-center py-2 rounded mt-2">
+        {successMessage}
+    </div>
+)}
                 <Link className="text-sm mt-3 text-center block text-blue-600 hover:underline" href='/'>
                     Already have an account? <span className="font-bold">Login</span>
                 </Link>
